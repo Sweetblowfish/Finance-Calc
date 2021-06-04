@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Financial Calculators</title>
+
+
+
+<!-- CSS -->
+<style type="text/css">
+
+
+    input {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: rgb(112, 22, 22);
+        border: none;
+        opacity: 80%;
+    }
+
+    p {
+        color: rgb(16, 10, 88);
+        border: none;
+    }
+
+    form {
+        color: rgb(16, 10, 88);
+        background-color: rgb(212, 209, 236);
+        border-radius: 20px;
+        font-size: large;
+    }
+
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .btn-primary {
+        background-color: rgb(16, 10, 88) !important;
+        border: rgb(192, 189, 224) !important;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+
+
+
+<!-- HTML -->
+
+<head>
+    
+</head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Javascript Earnings Calculator</h1>
+    <p class="lead">Use the form to enter values that the calculator will output results for. Clicking the clear buttton
+        will reset the
+        fields</p>
+    <hr class="my-4">
+    <p>Christina Tomter 2021</p>
+</div>
+
+<!-- form -->
+<div class="col-md-6">
+    <form name="financialFormulas" class="col-md-12 mx-auto">
+
+        <div class="form-group row ">
+            <div class="col-sm-4">
+                <label for="Profit" class="m-3 ">Profit</label>
+                <input type="text" name="profit" id="profit" class="form-control m-3" placeholder="275000000000"
+                    aria-describedby="helpId" required>
+            </div>
+            <div class="col-sm-3">
+                <label for="EarningsPerShare" class="m-3">Earinings Per Share</label>
+                <input type="text" id="earningsPerShare" class="form-control m-3" disabled>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-4">
+                <label for="AverageNumberOfShares" class="m-3">Average Number of Shares</label>
+                <input type="text" name="avgNoShares" id="avgNoShares" class="form-control m-3" placeholder="1600000000"
+                    aria-describedby="helpId" required>
+            </div>
+            <div class="col-sm-3">
+                <label for="PriceToBook" class="m-3">Price to Book</label>
+                <input type="text" id="priceToBook" class="form-control m-3" disabled>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-sm-4">
+            <label for="PricePerShare" class="m-3">Price Per Share</label>
+            <input type="text" name="PricePerShare" id="pricePerShare" class="form-control m-3" placeholder="145.00"
+                aria-describedby="helpId" required>
+            </div>
+            <div class="col-sm-3">
+                <label for="PERatio" class="m-3">PE Ratio</label>
+                <input type="text" id="PERatio" class="form-control m-3" disabled>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-sm-4">
+                <label for="TotalAssets" class="m-3">Total Assets</label>
+                <input type="text" name="assets" id="totalAssets" class="form-control m-3" placeholder="275000000000"
+                    aria-describedby="helpId" required>
+            </div>
+            <div class="col-sm-4">
+                <label for="pricetoEarningsRatio" class="m-3">Price to Earnings Ratio</label>
+                <input type="text" id="priceToEarningsRatio" class="form-control m-3" disabled>
+            </div>
+
+        </div>
+
+        <div class="form-group row col-sm-6">
+            <label for="TotalLiabilities" class="m-3">Total Liabilities</label>
+            <input type="text" name="liabilities" id="totalLiabilities" class="form-control m-3"
+                placeholder="1000000000" aria-describedby="helpId" required>
+
+        </div>
+        <div class="form-group row col-sm-6">
+            <label for="%ExpectedGrowth" class="m-3">Percentage Expected Growth (%)</label>
+            <input type="text" name="perExpectedGrowth" id="perExpectedGrowth" class="form-control m-3" placeholder="6"
+                aria-describedby="helpId" required>
+
+        </div>
+        <div class="row col-sm-6">
+        <input type="button" id="calculate" name="Calculate" value="Calculate" class="m-2 btn btn-primary btn-lg"
+            onclick="calcForm();" />
+        <input type="reset" id="clear" name="Clear" value="Reset" type="reset" class="m-2 btn btn-primary btn-sm" />
+    </div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<script src="CalcForm.js"></script>
+</body>
+</html>
+
+
+
